@@ -11,7 +11,7 @@ const Cards = (props) => {
 
 // Make sure you include prop types for all of your incoming props
 
-Card.propTypes = {
+Cards.propTypes = {
 	cardData : PropTypes.arrayOf(
 		PropTypes.shape({
 			headline : PropTypes.string,
