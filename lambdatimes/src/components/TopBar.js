@@ -1,24 +1,31 @@
 import React from 'react';
 
-// Refactor this component to use styled components and not classNames. 
+// Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
+import { TopBarWrapper, Container, Left, LeftSpan, Center, CenterSpan, Right, RightSpan } from './StyledComp';
+
 const TopBar = () => {
-  return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
-  )
-}
+	return (
+		<TopBarWrapper>
+			<Container>
+				<Left>
+					<LeftSpan>TOPICS</LeftSpan>
+					<LeftSpan>SEARCH</LeftSpan>
+				</Left>
+				<Center>
+					<CenterSpan>GENERAL</CenterSpan>
+					<CenterSpan>BROWNBAG</CenterSpan>
+					<CenterSpan>RANDOM</CenterSpan>
+					<CenterSpan>MUSIC</CenterSpan>
+					<CenterSpan>ANNOUNCEMENTS</CenterSpan>
+				</Center>
+				<Right>
+					<RightSpan>LOG IN</RightSpan>
+				</Right>
+			</Container>
+		</TopBarWrapper>
+	);
+};
 
 export default TopBar;
