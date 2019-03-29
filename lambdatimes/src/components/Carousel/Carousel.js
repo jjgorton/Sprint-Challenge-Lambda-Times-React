@@ -21,7 +21,7 @@ export default class Carousel extends Component {
 	leftClick = () => {
 		let index = this.state.counter;
 		if (index === this.state.imgArray.length - 1) {
-			index = 0;
+			index = -1;
 		}
 		index++;
 		this.setState({
@@ -35,7 +35,7 @@ export default class Carousel extends Component {
 	rightClick = () => {
 		let index = this.state.counter;
 		if (index === 0) {
-			index = this.state.imgArray.length - 1;
+			index = this.state.imgArray.length;
 		}
 		index--;
 		this.setState({
